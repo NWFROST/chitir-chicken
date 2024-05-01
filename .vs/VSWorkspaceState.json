@@ -1,0 +1,16 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\gradle\\wrapper",
+    "\\src",
+    "\\src\\main",
+    "\\src\\main\\java",
+    "\\src\\main\\java\\name",
+    "\\src\\main\\java\\name\\chitir",
+    "\\src\\main\\resources",
+    "\\src\\main\\resources\\assets",
+    "\\src\\main\\resources\\assets\\chitir-chicken"
+  ],
+  "SelectedNode": "\\src\\main\\java\\name\\chitir\\ChitirChicken.java",
+  "PreviewInSolutionExplorer": false
+}

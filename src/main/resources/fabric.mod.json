@@ -1,0 +1,40 @@
+{
+	"schemaVersion": 1,
+	"id": "chitir-chicken",
+	"version": "${version}",
+	"name": "Chitir Chicken",
+	"description": "Official Chitir Chicken mod! Made by the CRT Family",
+	"authors": [
+		"nwfrost"
+	],
+	"contact": {
+		"homepage": "https://fabricmc.net/",
+		"sources": "https://github.com/FabricMC/fabric-example-mod"
+	},
+	"license": "MIT",
+	"icon": "assets/chitir-chicken/icon.png",
+	"environment": "*",
+	"entrypoints": {
+		"main": [
+			"name.chitir.ChitirChicken"
+		],
+		"client": [
+			"name.chitir.ChitirChickenClient"
+		],
+		"fabric-datagen": [
+			"name.chitir.ChitirChickenDataGenerator"
+		]
+	},
+	"mixins": [
+		"chitir-chicken.mixins.json"
+	],
+	"depends": {
+		"fabricloader": ">=0.15.10",
+		"minecraft": "~1.20.1",
+		"java": ">=17",
+		"fabric-api": "*"
+	},
+	"suggests": {
+		"another-mod": "*"
+	}
+}
