@@ -1,3 +1,9 @@
 {
-  "item.chitirchicken.ctrbucket": "Chitir Chicken Bucket"
+  "item.chitir.ctrbucket": "Chitir Chicken Bucket",
+  "item.chitir.friedchicken": "Fried Chicken",
+  "item.chitir.ctrpotion": "Chitir Chicken Potion",
+  "item.chitir.ctrburger": "Chicken Burger",
+  "block.chitir.deepfryer": "Deep Fryer",
+
+  "itemgroup.chicken": "CTR CHICKEN"
 }

@@ -1,6 +1,6 @@
 {
   "parent": "item/generated",
   "textures": {
-    "layer0": "chitir:item/ctrbucket"
+    "layer0": "chitir:item/friedchicken"
   }
 }
