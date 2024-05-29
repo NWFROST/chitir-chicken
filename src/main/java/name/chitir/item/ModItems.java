@@ -31,7 +31,5 @@ public class ModItems {
 
     public static void registerModItems() {
         ChitirChicken.LOGGER.info("Registering Mod Items for " + ChitirChicken.MOD_ID);
-
-        ItemGroupEvents.modifyEntriesEvent(ItemGroups.INGREDIENTS).register(ModItems::addItemsToIngredientTabItemGroup);
     }
 }
