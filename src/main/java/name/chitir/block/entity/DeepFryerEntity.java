@@ -43,8 +43,6 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class DeepFryerEntity extends BlockEntity {
-    private static final int field_31330 = 3;
-    private static final int field_31331 = 6;
     private final DefaultedList<ItemStack> itemsBeingCooked = DefaultedList.ofSize(4, ItemStack.EMPTY);
     private final int[] cookingTimes = new int[6];
     private final int[] cookingTotalTimes = new int[6];

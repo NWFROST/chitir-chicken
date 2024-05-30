@@ -22,7 +22,6 @@ import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
 public class DeepFryer extends BlockWithEntity {
-    public static final BooleanProperty LIT = Properties.LIT;
 
     public DeepFryer(Settings settings) {
         super(settings);
