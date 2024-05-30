@@ -12,11 +12,11 @@ import net.minecraft.registry.Registries;
 import net.minecraft.registry.Registry;
 import net.minecraft.util.Identifier;
 
-import static net.minecraft.block.Blocks.BLUE_GLAZED_TERRACOTTA;
+import static net.minecraft.block.Blocks.IRON_BLOCK;
 
 public class ModBlocks {
     public static final Block DEEPFRYER = registerBlock("deepfryer",
-            new DeepFryer(FabricBlockSettings.copyOf(BLUE_GLAZED_TERRACOTTA)));
+            new DeepFryer(FabricBlockSettings.copyOf(IRON_BLOCK)));
 
     private static Block registerBlock(String name, Block block) {
         registerBlockItem(name, block);
