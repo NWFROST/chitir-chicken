@@ -1,5 +1,8 @@
 {
   "variants": {
-    "": { "model": "chitir:block/deepfryer" }
+    "facing=north": { "model": "chitir:block/deepfryer", "uvlock": true },
+    "facing=east":  { "model": "chitir:block/deepfryer", "y":  90, "uvlock": true },
+    "facing=south": { "model": "chitir:block/deepfryer", "y": 180, "uvlock": true },
+    "facing=west":  { "model": "chitir:block/deepfryer", "y": 270, "uvlock": true }
   }
 }
