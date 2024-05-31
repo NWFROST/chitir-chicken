@@ -188,7 +188,7 @@ public class DeepFryerEntity extends BlockEntity {
 
     public static final BlockEntityType<DeepFryerEntity> DEEPFRYER = Registry.register(
             Registries.BLOCK_ENTITY_TYPE,
-            new Identifier("tutorial", "demo_block_entity"),
+            new Identifier("chitir", "DeepFryerEntity"),
             FabricBlockEntityTypeBuilder.create(DeepFryerEntity::new, ModBlocks.DEEPFRYER).build()
     );
 }

@@ -8,11 +8,16 @@ import net.minecraft.block.entity.BlockEntityType;
 import net.minecraft.block.entity.CampfireBlockEntity;
 import net.minecraft.entity.player.PlayerEntity;
 import net.minecraft.item.ItemPlacementContext;
+import net.minecraft.item.ItemStack;
+import net.minecraft.recipe.CampfireCookingRecipe;
 import net.minecraft.screen.NamedScreenHandlerFactory;
 import net.minecraft.stat.Stats;
 import net.minecraft.state.StateManager;
 import net.minecraft.state.property.BooleanProperty;
 import net.minecraft.state.property.Properties;
+import net.minecraft.util.ActionResult;
+import net.minecraft.util.Hand;
+import net.minecraft.util.hit.BlockHitResult;
 import net.minecraft.util.math.BlockPos;
 import net.minecraft.util.math.Direction;
 import net.minecraft.util.shape.VoxelShape;
@@ -21,7 +26,24 @@ import net.minecraft.world.BlockView;
 import net.minecraft.world.World;
 import org.jetbrains.annotations.Nullable;
 
+import java.util.Optional;
+
 public class DeepFryer extends BlockWithEntity {
+
+    @Override
+    public ActionResult onUse(BlockState state, World world, BlockPos pos, PlayerEntity player, Hand hand, BlockHitResult hit) {
+        ItemStack itemStack;
+        DeepFryerEntity deepFryerEntity;
+        Optional<CampfireCookingRecipe> optional;
+        BlockEntity blockEntity = world.getBlockEntity(pos);
+        if (blockEntity instanceof DeepFryerEntity && (optional = (deepFryerEntity = (DeepFryerEntity)blockEntity).getRecipeFor(itemStack = player.getStackInHand(hand))).isPresent()) {
+            if (!world.isClient && deepFryerEntity.addItem(player, player.getAbilities().creativeMode ? itemStack.copy() : itemStack, optional.get().getCookTime())) {
+                return ActionResult.SUCCESS;
+            }
+            return ActionResult.CONSUME;
+        }
+        return ActionResult.PASS;
+    }
 
     public DeepFryer(Settings settings) {
         super(settings);
