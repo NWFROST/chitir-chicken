@@ -43,8 +43,8 @@ import org.jetbrains.annotations.Nullable;
 import java.util.Optional;
 
 public class DeepFryerEntity extends BlockEntity {
-    private final DefaultedList<ItemStack> itemsBeingCooked = DefaultedList.ofSize(4, ItemStack.EMPTY);
-    private final int[] cookingTimes = new int[6];
+    private final DefaultedList<ItemStack> itemsBeingCooked = DefaultedList.ofSize(6, ItemStack.EMPTY);
+    private final int[] cookingTimes = new int[3];
     private final int[] cookingTotalTimes = new int[6];
     private final RecipeManager.MatchGetter<Inventory, CampfireCookingRecipe> matchGetter = RecipeManager.createCachedMatchGetter(RecipeType.CAMPFIRE_COOKING);
 
